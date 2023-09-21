@@ -30,7 +30,7 @@ void w_draw_rectangle(){
     );
 
     if (hwnd == NULL) {
-        return 0;
+        return ;
     }
 
     ShowWindow(hwnd, SW_SHOWDEFAULT);
@@ -55,7 +55,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
             RECT rect;
             GetClientRect(hwnd, &rect);
 
-            HBRUSH brush = CreateSolidBrush(RGB(255, 0, 0));
+            HBRUSH brush = CreateSolidBrush(RGB(0, 0, 0));
             FillRect(hdc, &rect, brush);
             DeleteObject(brush);
 
